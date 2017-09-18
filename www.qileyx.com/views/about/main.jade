@@ -1,0 +1,64 @@
+extends ../include/iframe
+append variable
+    - var img_path='http://r.syyx.com/qile/about/'
+    - var path='about.html'
+    - var name='关于我们'
+append head
+    link(rel='stylesheet',href='/stylesheets/about/main.css')
+
+append header
+    include ../include/head_nav
+    include ../include/head_sub
+append container
+    .container
+        .intorduce
+            .head
+                .head-into
+                    span &nbsp
+                    p 公司介绍
+            hr
+            p.content
+                span 深圳市其乐游戏科技有限公司于2015年9月成立，总部设于深圳南山区。致力成为受用户喜爱的游戏研发商！拥有一支多年游戏研发、运营、推广经验的专业团队，成员均曾有服务于国内一线游戏研发商。
+                br
+                img(src='#{img_path}dark-logo.png')
+                br
+                span 团队研发理念：只做精品游戏!
+                br
+                br
+                span 目前主研移动端休闲游戏，如斗地主、消消乐等产品在终端厂商的渠道上表现脱俗，已成为重点主推游戏。
+        .message
+            .head
+                .head-into
+                    span &nbsp
+                    p 公司信息
+            hr
+            .content
+                p.firstline
+                    span.part1
+                        span
+                        span 公司地址：深圳市南山区科技园南区高新南一道赋安科技大厦B座6楼
+                    span.part2
+                        span
+                        span 联系电话：0755-86360633转8048
+                p.secondline
+                    span.part1
+                        span
+                        span 最近公交站：科技园创维总部、中科大夏、飞亚达大夏、大冲
+                    span.part2
+                        span
+                        span 邮箱：xiaox@syyx.com
+                p.thirdline
+                    span.part1
+                        span
+                        span 邮编：518057
+                    span.part2
+                        span
+                        span 地铁：高新园
+                p.forthline
+                    span
+                        span
+                        span 附近公交：m345路, 51路, b609路, 高峰30路, 高峰10路, b683路, 21路,234路, 327路, 368路, 369路, 373路, 390路, 42路 
+    .map
+
+append script
+    script(src='/javascripts/about/main.js')

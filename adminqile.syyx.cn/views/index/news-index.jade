@@ -1,0 +1,55 @@
+extends ../include/frame
+
+append ihead
+    link(rel='stylesheet',href='/stylesheets/index/main.css')
+append logo
+    p 首页推送
+append icontent
+    ul.nav.nav-tabs
+        li: a(href='index') 幕布推送
+        li: a(href='game-index') 游戏推送
+        li: a(href='hot-index') 最热游戏
+        li.active: a(href='news-index') 动态推送
+    
+               
+    .two-form       
+        section#publish  
+            p 新闻列表          
+            .hr
+            table(class='table table-hover')
+                thead
+                    tr
+                        th id
+                        th 标题
+                        th 操作
+                tbody
+                    tr(v-for='(item, index) in list')
+                        td {{item.id}}
+                        td {{item.title}}
+                        td: a.mouse(@click='push(index)') 推送
+
+        section#push    
+            p 推送列表          
+            .hr
+            table(class='table table-hover')
+                thead
+                    tr
+                        th id
+                        th 标题
+                        th 操作
+                tbody
+                    tr(v-for='(item, index) in list')
+                        td {{item.item_id}}
+                        td {{item.title}}
+                        td: a.mouse(@click='unpush(index)') 撤回
+
+
+
+
+
+
+
+
+
+append iscript
+    script(src='/javascripts/index/news-index.js')

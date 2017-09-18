@@ -1,0 +1,5 @@
+.icontent .two-form{display:flex;flex-direction:row;}
+.icontent .two-form section{flex:1;overflow-y:auto;}
+.icontent .two-form section p{margin-top:10px;margin-bottom:-10px;font-size:20px;font-family:'youyuan';font-weight:bold}
+.icontent .two-form #publish{order:1;margin-right:10px}
+.icontent .two-form #push{order:2;margin-left:10px}

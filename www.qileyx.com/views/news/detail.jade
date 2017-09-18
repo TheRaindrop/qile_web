@@ -1,0 +1,40 @@
+extends ../include/iframe
+append variable
+    - var img_path='http://r.syyx.com/qile/news/'
+
+append head
+    link(rel='stylesheet',href='/stylesheets/news/main.css')
+
+append header
+    include ../include/head_nav
+    .head_sub
+        .content
+            a(href='index.html') 首页&nbsp;&nbsp;&nbsp;
+            img(src='http://r.syyx.com/qile/index/arrow.png')
+            &nbsp;
+            a(href='news.html') 其乐动态&nbsp;&nbsp;&nbsp;
+            img(src='http://r.syyx.com/qile/index/arrow.png')
+            &nbsp;
+            a.active(href='detail') 新闻
+append container
+    .container
+        .header
+            .head
+                .head-into
+                    span &nbsp
+                    p 其乐动态
+            hr
+        .article
+            //- p.title 醉酒当歌，人生几何
+            //- p.date 日期:2017/5/12
+            //- .hr
+            //- p.content
+            //-     |譬如朝露
+            //-     |去日苦多
+            //-     |慨当以慷
+            //-     |忧思难忘
+
+
+
+append script
+    script(src='/javascripts/news/detail.js')

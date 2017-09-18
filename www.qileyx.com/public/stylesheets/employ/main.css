@@ -1,0 +1,34 @@
+.ihead{width:100%;height:120px;background-color:#181818;}
+.ihead .head_nav{position:relative;width:1120px;height:60px;left:50%;margin-left:-560px;}
+.ihead .head_nav a.logo img{top:50%;position:relative;margin-top:-23px}
+.ihead .head_nav .inav{display:inline-block;font-size:20px;width:750px;position:relative;float:right;top:50%;margin-top:-13px;}
+.ihead .head_nav .inav a{margin-left:75px;padding-bottom:10px}
+.ihead .head_nav .inav a.active{color:#21a2dd;border-bottom:1px solid #21a2dd}
+.ihead .head_nav .inav a:hover{color:2 b95ca}
+.ihead .head_sub{position:relative;width:1120px;height:60px;left:50%;margin-left:-560px;font-size:14px;}
+.ihead .head_sub .content{margin-top:30px}
+.ihead .head_sub a.active{color:#21a2dd}
+.ihead .head_sub a:hover{color:#2b95ca}
+.icontainer{width:100%;color:#000;font-size:18px;}
+.icontainer .container{position:relative;width:1200px;left:50%;margin-left:-600px;}
+.icontainer .container .header{padding-top:50px;height:60px;}
+.icontainer .container .header .head .head-into{width:150px;height:34px;position:relative;left:50%;margin-left:-75px;}
+.icontainer .container .header .head .head-into span{display:inline-block;float:left;width:35px;height:35px;background-position:0 0;background-repeat:no-repeat;background-image:url("http://r.syyx.com/qile/employ/employ.png");padding-bottom:5px}
+.icontainer .container .header .head .head-into p{display:inline-block;float:right;padding-bottom:5px;font-size:25px;font-weight:bold;border-bottom:solid 2px #21a2dd}
+.icontainer .container .header hr{margin-bottom:10px}
+.icontainer .container .post-list{height:550px;}
+.icontainer .container .post-list table.post{width:100%;border-collapse:collapse;}
+.icontainer .container .post-list table.post thead> tr> th,.icontainer .container .post-list table.post tbody> tr> td{text-align:center;height:60px}
+.icontainer .container .post-list table.post thead> tr> th{border-bottom:1px solid #21a2dd}
+.icontainer .container .post-list table.post tbody> tr> td{border-bottom:1px dashed #d2d2d2}
+.icontainer .container .post-list table.post tbody> tr:hover{background-color:#eaeaea}
+.icontainer .container .pages{margin-top:40px;margin-bottom:40px;}
+.icontainer .container .pages ul.page{display:inline-block;position:relative;}
+.icontainer .container .pages ul.page li{display:inline-block;margin:auto 10px;}
+.icontainer .container .pages ul.page li a{border:solid #000 1px;text-align:center;display:inline-block;height:25px;box-shadow:-2px 0 2px #000}
+.icontainer .container .pages ul.page li a.active{color:#2b95ca;border-color:#2b95ca}
+.icontainer .container .pages ul.page li a.index{width:25px}
+.icontainer .container .pages ul.page li a:hover{border-color:#2b95ca}
+.icontainer .container .detail .title{font-weight:bold;line-height:2}
+.icontainer .container .detail .hr{border-top:1px solid #21a2dd;margin-top:5px;margin-bottom:10px}
+.icontainer .container .detail .content{margin-bottom:20px}

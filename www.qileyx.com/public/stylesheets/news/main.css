@@ -1,0 +1,35 @@
+.ihead{width:100%;height:120px;background-color:#181818;}
+.ihead .head_nav{position:relative;width:1120px;height:60px;left:50%;margin-left:-560px;}
+.ihead .head_nav a.logo img{top:50%;position:relative;margin-top:-23px}
+.ihead .head_nav .inav{display:inline-block;font-size:20px;width:750px;position:relative;float:right;top:50%;margin-top:-13px;}
+.ihead .head_nav .inav a{margin-left:75px;padding-bottom:10px}
+.ihead .head_nav .inav a.active{color:#21a2dd;border-bottom:1px solid #21a2dd}
+.ihead .head_nav .inav a:hover{color:2 b95ca}
+.ihead .head_sub{position:relative;width:1120px;height:60px;left:50%;margin-left:-560px;font-size:14px;}
+.ihead .head_sub .content{margin-top:30px}
+.ihead .head_sub a.active{color:#21a2dd}
+.ihead .head_sub a:hover{color:#2b95ca}
+.icontainer{width:100%;color:#000;font-size:18px;}
+.icontainer .container{position:relative;width:1200px;left:50%;margin-left:-600px;}
+.icontainer .container .header{padding-top:50px;height:60px;}
+.icontainer .container .header .head .head-into{width:150px;height:34px;position:relative;left:50%;margin-left:-75px;}
+.icontainer .container .header .head .head-into span{display:inline-block;float:left;width:34px;height:32px;background-position:3px 5px;background-repeat:no-repeat;background-image:url("http://r.syyx.com/qile/news/news.png");padding-bottom:5px}
+.icontainer .container .header .head .head-into p{display:inline-block;float:right;padding-bottom:5px;font-size:25px;font-weight:bold;border-bottom:solid 2px #21a2dd}
+.icontainer .container .header hr{margin-bottom:10px}
+.icontainer .container .new-list{height:610px;}
+.icontainer .container .new-list ul.news li{height:61px;}
+.icontainer .container .new-list ul.news li a{width:1180px;height:60px;border-bottom:dashed 1px #000;display:inline-block;padding:0 10px;}
+.icontainer .container .new-list ul.news li a span{margin-top:20px}
+.icontainer .container .new-list ul.news li a span.title{float:left}
+.icontainer .container .new-list ul.news li a span.date{float:right}
+.icontainer .container .new-list ul.news li a:hover{color:#2b95ca;border-bottom-color:#2b95ca;background-color:#eaeaea}
+.icontainer .container .pages{margin-top:40px;margin-bottom:40px;}
+.icontainer .container .pages ul.page{display:inline-block;position:relative;}
+.icontainer .container .pages ul.page li{display:inline-block;margin:auto 10px;}
+.icontainer .container .pages ul.page li a{border:solid #000 1px;text-align:center;display:inline-block;height:25px;box-shadow:-2px 0 2px #000}
+.icontainer .container .pages ul.page li a.active{color:#2b95ca;border-color:#2b95ca}
+.icontainer .container .pages ul.page li a.index{width:25px}
+.icontainer .container .pages ul.page li a:hover{border-color:#2b95ca}
+.icontainer .container .article .title{text-align:center;font-size:25px;font-weight:bold;margin-bottom:15px}
+.icontainer .container .article .date{text-align:center;font-size:15px}
+.icontainer .container .article .hr{border-top:1px dashed #ccc;margin-top:15px;margin-bottom:15px}

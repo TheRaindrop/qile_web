@@ -1,0 +1,53 @@
+extends ../include/iframe
+append variable
+    - var img_path='http://r.syyx.com/qile/employ/'
+
+append head
+    link(rel='stylesheet',href='/stylesheets/employ/main.css')
+
+append header
+    include ../include/head_nav
+    .head_sub
+        .content
+            a(href='index.html') 首页&nbsp;&nbsp;&nbsp;
+            img(src='http://r.syyx.com/qile/index/arrow.png')
+            &nbsp;
+            a(href='employ.html') 招聘信息&nbsp;&nbsp;&nbsp;
+            img(src='http://r.syyx.com/qile/index/arrow.png')
+            &nbsp;
+            a.active(href='emp_detail') 岗位信息
+append container
+    .container
+        .header
+            .head
+                .head-into
+                    span &nbsp
+                    p 招聘信息
+            hr
+        .detail
+            //- p.title 职位信息
+            //- .hr
+            //- p.
+            //-     ksksksk
+            //-     sksksksksk
+            //-     kkdkdkddkdkjk
+            //- p.title 岗位要求
+            //- .hr
+            //- p.
+            //-     ksksksk
+            //-     sksksksksk
+            //-     kkdkdkddkdkjk
+            //- p.title 职位职责
+            //- .hr
+            //- p.
+            //-     ksksksk
+            //-     sksksksksk
+            //-     kkdkdkddkdkjk
+            img(src='http://r.syyx.com/qile/employ/mail.png') 
+            
+            
+
+
+
+append script
+    script(src='/javascripts/employ/emp_detail.js')

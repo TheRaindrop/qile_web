@@ -1,0 +1,121 @@
+vendor(prop, args)
+    -webkit-{prop} args
+    -moz-{prop} args
+    {prop} args
+    
+box-shadow()
+    vendor('box-shadow', arguments)
+box-sizing()
+    vendor('box-sizing', arguments)
+*
+    margin 0
+    padding 0
+    outline none
+    box-sizing border-box
+    &:active, &:focus
+        outline none
+.disnone 
+    display none
+    
+html
+    height 100%
+body
+    position relative
+    font-family '微软雅黑', '宋体'
+    font-size 14px
+    background-color #fff
+    // color #444
+    height 100%
+    width 100%
+    overflow-y auto
+.mouse, .btn 
+    cursor pointer
+img
+    border none
+ul
+    list-style none
+.wrap
+    flex-direction column
+    // height:100vh
+    display flex
+    .content, .sidebar
+        overflow-y auto
+        padding 2em 0
+        display block
+    .sidebar
+        background #ff6347
+        flex 1
+        border-bottom 1px solid #eee
+        text-align center
+        color #fff
+        padding-bottom 0.5em
+        min-width 200px
+        p
+            font-size 1.5em
+            margin-bottom 20px
+        p.logout
+            bottom 10px
+            font-size 1.2em
+        nav 
+            ul
+                li
+                    // cursor pointer
+                    // border none
+                    background-color inherit
+                a
+                    // text-decoration none
+                    color #fff
+                    width 100%
+                    height 100%
+                    background-color inherit
+                li.active>a, li.active>a:hover, li.active>a:focus, li:hover
+                    background-color: #ff5537;
+    .content
+        flex 9
+        position relative
+        .logo
+            position      absolute
+            right         20px
+            top           20px
+            font-size     40px
+            font-family   'youyuan'
+            font-weight   bolder
+            color         #663399
+        .icontent
+            padding-left 20px
+            .form-inline > *
+                margin-right 20px
+                border-radius 0
+            .hr
+                margin 20px 0 10px 
+                border-top 1px solid #663399
+            .modal *
+                border-radius 0
+            .modal> .modal-dialog> .modal-content> .modal-body> form> .form-group img 
+                width 200px
+            .modal .panel
+                height 400px
+                width 44%
+                overflow-y auto
+                margin-left 4%
+                display inline-block
+                .panel-body> ul
+                    min-height 200px
+                    li> span
+                        float right
+
+
+
+
+
+
+@media (min-width:800px)
+    .wrap
+        flex-direction row
+    .content
+        order 1
+    .sidebar
+        order 2
+    body
+        font-size 16px
+

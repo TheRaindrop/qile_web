@@ -1,0 +1,19 @@
+*{margin:0;padding:0;outline:none;}
+*:active,*:focus{outline:none}
+.disnone{display:none}
+html{height:100%}
+body{position:relative;font-family:'微软雅黑','宋体';font-size:12px;background-color:#fff;color:#ccc;height:100%;min-width:1120px;overflow-x:hidden}
+img{border:none}
+.mouse{cursor:pointer}
+a{text-decoration:none;color:#000;}
+a:hover{color:#2b95ca}
+.ihead a,.ifooter a{color:#fff;}
+.ihead a:hover,.ifooter a:hover{color:#2b95ca}
+ul{list-style:none}
+.ifooter{background-color:#181818;height:117px;width:100%;}
+.ifooter .icontent{position:relative;width:1120px;margin:0 auto;padding-top:20px;}
+.ifooter .icontent .logo{margin-top:20px}
+.ifooter .icontent .wen{margin-left:30px}
+span.logo,a.wen{float:left}
+ul.menu-box,div.copy-right,icp.left,p.left{margin-left:300px;margin-top:5px}
+.menu-list{display:inline}

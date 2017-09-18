@@ -1,0 +1,79 @@
+extends ../include/iframe
+append variable
+    - var img_path='http://r.syyx.com/qile/index/'
+append head
+    link(rel='stylesheet',href='/stylesheets/index/main.css')
+
+append header
+    a.d1.bg.mouse
+        //- .text
+        //-     p.title 元气骑士
+        //-     p.summary 世界危在旦夕，时间处于剑与魔法的时代
+        //-     button 了解更多
+    a.d2.bg.mouse       
+    a.d3.bg.mouse      
+    a.d4.bg.mouse
+    include ../include/head_nav
+    include ../include/carousel
+append container
+    .game-list
+        ul.list
+            //- li.game
+            //-     a(href='#'): img(src='#{img_path}game-list.png')
+            //-     .hide
+            //-         strong 元气骑士
+            //-         hr
+            //-         .bg
+            //-         span 扫码下载
+           
+    .black-block
+    .new-s
+        .hottest.mouse
+            //- .pic
+            //-     img(src='#{img_path}hottest.jpg')
+            //- .text
+            //-     p.title 元气骑士首发上线！
+            //-     p.date 2017/6/16
+            //-     hr
+            //-     p.content 元气骑士是一款角色扮演手游，世界危在旦夕，时间处于剑与魔法的时代，维持世界平衡的魔法石被拥有高科技的外星生物夺走了。
+        .news
+            p.head
+                img(src='#{img_path}news.png')
+                strong 其乐动态
+                a(href='news.html') more+
+            hr    
+            ul.news-list
+                //- li
+                //-     a(href='#') 拼血量还是秀操作？《元气骑士》全新职业...
+                //-     span 2017/5/12
+                //- li
+                //-     a(href='#') 拼血量还是秀操作？《元气骑士》全新职业...
+                //-     span 2017/5/12
+
+    .joinus
+        .employ
+            a(href='#')
+        .company
+            a(href='#')
+        .contact
+            a(href='#')
+    .partner
+        .p-title
+            hr
+            span.space
+            img(src='#{img_path}spot.png')
+            span.space
+            span 合作伙伴
+            span.space
+            img(src='#{img_path}spot.png')
+            span.space
+            hr  
+        .p-detail
+            .oppo
+            .vivo
+            .huawei
+            .coolpad
+            .tencent
+            .kugou
+append script
+    script(src='/javascripts/index/out.js')

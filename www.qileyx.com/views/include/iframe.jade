@@ -1,0 +1,24 @@
+doctype html
+block variable
+html
+    head
+        title 其乐游戏
+        meta(charset='utf8')
+        meta(name='author',content='xiatong')
+        link(rel='stylesheet',href='/stylesheets/main.css')
+        block head
+    body
+        .ihead
+            block header
+        .icontainer
+            block container
+        .ifooter
+            include footer
+        script(src='http://r.syyx.com/vendor/jquery/jquery-1.9.1.min.js')            
+        //- script(src='/javascripts/main.js')
+        block script
+            .disnone
+                script(src="http://r.syyx.com/home_log.min.js", type="text/javascript")
+                script(src="/javascripts/xt_common.js", type="text/javascript")
+        
+        

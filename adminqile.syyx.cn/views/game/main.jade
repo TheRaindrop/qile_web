@@ -1,0 +1,129 @@
+extends ../include/frame
+
+append ihead
+append logo
+    p 产品介绍
+append icontent          
+    form.form-inline#find_form
+        select.form-control.form-control-sm.status(v-model='query.status', @change='refresh')
+            option(value='1') 已发布
+            option(value='0') 未发布
+            option(value='-1') 已删除
+        input.form-control.form-control-sm(placeholder='ID', v-model='query.id')
+        //- input.form-control.form-control-sm(placeholder='作者', v-model='query.author')
+        input.form-control.form-control-sm(placeholder='标题', v-model='query.title')
+        a.btn.btn-danger.btn-sm(@click='search') 查询
+        a.btn.btn-danger.btn-sm(@click='add') 新增
+        //- p {{msg}}
+        //- a#add.btn.btn-outline-secondary.btn-sm 添加
+    .hr
+
+
+
+    //- table.table.table-hover#unPublish
+    //- table.table.table-hover#delete
+    table.table.table-hover#publish
+        thead
+            tr
+                th 标题
+                //- th 作者
+                th 简介
+                th 操作
+        tbody
+            tr(v-for='(item, index) in list',@dblclick='show(query.status, item)')
+                td {{item.title}}
+                td(style='width:1000px') {{item.summary}}
+                td
+                    template(v-if='query.status==1')
+                        a.mouse(@click='upd(index,0)') 撤回
+                        &nbsp;
+                        a.mouse.mouse(@click='upd(index, -1)') 删除
+                    template.mousete(v-else-if='query.status==0')
+                        a.mouse(@click='upd(index, 1)') 发布
+                        &nbsp;
+                        a.mouse(@click='upd(index, -1)') 删除
+                    template(v-else='query.status==-1')
+                        a.mouse(@click='upd(index, 0)') 恢复
+                    //- cmp(:data='list', @ok='dfd(a, b, c)')
+                    
+                   
+
+
+
+    //modal-lg
+    .modal.fade.lg#modal_game(tabindex='-1',role='dialog',aria-hidden='true')
+        .modal-dialog.modal-lg
+            .modal-content
+                .modal-header
+                    button.close: span(aria-hidden='true', data-dismiss='modal') &times;
+                    h4.modal-title 游戏详情
+                .modal-body
+                    form
+                        .form-group
+                            label(for="title") 游戏名称
+                            input.form-control(type='text',v-model='item.title')
+                        .form-group
+                            label(for='bg_pic') 幕布图片(推荐大小：1920px*950px)
+                            .upload_pic(@click='upload_img(item, 1)')
+                                input(type='file', name='imgFile', data-file='')
+                                img.bg_pic( :src='item.bg_pic' )
+                        .form-group
+                            label(for='bg_sum') 幕布介绍
+                            textarea.form-control(rows='2', v-model = 'item.bg_sum')
+                        .form-group
+                            label(for='pic_url') 游戏列表图(推荐大小：386px*240px)
+                            .upload_pic(@click='upload_img(item, 2)')
+                                input(type='file', name='imgFile', data-file='')
+                                img.pic_url( :src='item.pic_url' )
+                        .form-group
+                            label(for='qrcode') 游戏二维码(推荐大小：144px*144px)
+                            .upload_pic(@click='upload_img(item, 3)')
+                                input(type='file', name='imgFile', data-file='')
+                                img.qrcode( :src='item.qrcode' )
+                        .form-group
+                            label(for='news_pic') 新闻头图(推荐大小：690px*320px)
+                            .upload_pic(@click='upload_img(item, 4)')
+                                input(type='file', name='imgFile', data-file='')
+                                img.news_pic( :src='item.news_pic' )
+                        .form-group
+                            label(for='news_sum') 新闻简介
+                            textarea.form-control(rows="2", v-model = 'item.news_sum')
+                        .form-group
+                            label(for="intro_link") 产品介绍
+                            br
+                            template(v-for='(i, index) in intro_link')
+                                span {{index}},{{i}}
+                        .form-group
+                            label(for='news_link') 新闻动态
+                            //- .drag
+                            //-     h2 list 1
+                            //-     draggable.dragArea(v-model='list', :options='{group:{name:"people", pull:"clone", put:false}}')
+                            //-         div(v-for='(element, index) in list', :key='index'), {{element.name}}
+                                
+                            //-     h2 list 2
+                            //-     draggable.dragArea(v-model='list2', :options='{group:"people"}')
+                            //-         div(v-for='(element, index) in list2', :key='index') {{element.name}}
+
+                            .row
+                                .panel.panel-info
+                                    .panel-heading 动态列表
+                                    .panel-body
+                                        draggable.list-group(v-model='news_list', :options='{group:{name:"news", pull:"clone", put:false}}', :element="'ul'")
+                                            li.list-group-item(:value='it.id', v-for = '(it, index) in news_list') {{it.title}}
+                                .panel.panel-info
+                                    .panel-heading 链接列表
+                                    .panel-body  
+                                        draggable.list-group(v-model='news_link', :options='{group:"news"}', :element="'ul'")
+                                            li.list-group-item(:value='it.id', v-for='(it, index) in news_link')
+                                                {{it.title}}
+                                                span.glyphicon.glyphicon-remove.mouse(@click='del_item(index)')
+                .modal-footer
+                    button.btn.btn-default(data-dismiss='modal') 取消
+                    button.btn.btn-primary(@click='sub_game(item)') 保存
+   
+
+append iscript
+    script(src='/vendor/kindeditor-4.1.5/kindeditor.js')
+    script(src='http://r.syyx.com/vendor/jquery-file-upload-9.10.0/js/vendor/jquery.ui.widget.js')
+    script(src='http://r.syyx.com/vendor/jquery-file-upload-9.10.0/js/jquery.fileupload.js')
+    script(src='/javascripts/game/main.js')

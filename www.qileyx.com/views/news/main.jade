@@ -1,0 +1,39 @@
+extends ../include/iframe
+append variable
+    - var img_path='http://r.syyx.com/qile/news/'
+    - var path='news.html'
+    - var name='其乐动态'
+append head
+    link(rel='stylesheet',href='/stylesheets/news/main.css')
+
+append header
+    include ../include/head_nav
+    include ../include/head_sub
+append container
+    .container
+        .header
+            .head
+                .head-into
+                    span &nbsp
+                    p 其乐动态
+            hr
+        .new-list
+            ul.news
+                //- li: a(href='#' news_id='')
+                //-     span.title 拼血量还是秀操作？《元气骑士》全新职业大猜想
+                //-     span.date 2017/5/12
+                //- li: a(href='#')
+                //-     span.title 拼血量还是秀操作？《元气骑士》全新职业大猜想
+                //-     span.date 2017/5/12
+                
+        .pages
+            ul.page
+                //- li: a(href='#') 上一页
+                //- li: a.index(href='#') 1
+                //- li: a.index(href='#') 2
+                //- li: a.index(href='#') 3
+                //- li: a.index(href='#') 4
+                //- li: a.index(href='#') 5
+                //- li: a(href='#') 下一页
+append script
+    script(src='/javascripts/news/main.js')

@@ -1,0 +1,50 @@
+extends ../include/iframe
+append variable
+    - var img_path='http://r.syyx.com/qile/employ/'
+    - var path='employ.html'
+    - var name='招聘信息'
+append head
+    link(rel='stylesheet',href='/stylesheets/employ/main.css')
+
+append header
+    include ../include/head_nav
+    include ../include/head_sub
+append container
+    .container
+        .header
+            .head
+                .head-into
+                    span &nbsp
+                    p 招聘信息
+            hr
+        .post-list
+            table.post
+                thead
+                    tr
+                        th 职位名称
+                        th 职位类型
+                        th 工作地点
+                        th 发布时间
+                tbody
+                    //- tr
+                    //-     td: a(href='#') 资深视觉设计师
+                    //-     td 艺术类
+                    //-     td 深圳
+                    //-     td 2017/5/12
+                    //- tr
+                    //-     td: a(href='#') 资深视觉设计师
+                    //-     td 艺术类
+                    //-     td 深圳
+                    //-     td 2017/5/12
+                   
+        .pages
+            ul.page
+                //- li: a(href='#') 上一页
+                //- li: a.index(href='#') 1
+                //- li: a.index(href='#') 2
+                //- li: a.index(href='#') 3
+                //- li: a.index(href='#') 4
+                //- li: a.index(href='#') 5
+                //- li: a(href='#') 下一页
+append script
+    script(src='/javascripts/employ/main.js')

@@ -1,0 +1,42 @@
+extends ../include/iframe
+append variable
+    - var img_path='http://r.syyx.com/qile/product/'
+    - var path='product.html'
+    - var name='产品介绍'
+append head
+    link(rel='stylesheet',href='/stylesheets/product/main.css')
+
+append header
+    include ../include/head_nav
+    include ../include/head_sub
+append container
+    .container
+        .header
+            .head
+                .head-into
+                    span &nbsp
+                    p 产品介绍
+            hr
+        .game-list
+            ul.list
+                //- li.game: a(href='#')
+                //-     img(src='#{img_path}game-list.png')
+                //-     p
+                //-         strong 元气骑士
+                //-         span 搜索地牢，收集各种奇异的武器，然后战暴小怪兽！流畅又有趣的游戏体验。
+                //- li.game: a(href='#')
+                //-     img(src='#{img_path}game-list.png')
+                //-     p
+                //-         strong 元气骑士
+                //-         span 搜索地牢，收集各种奇异的武器，然后战暴小怪兽！流畅又有趣的游戏体验。
+        .pages
+            ul.page
+                //- li: a(href='#') 上一页
+                //- li: a.index(href='#') 1
+                //- li: a.index(href='#') 2
+                //- li: a.index(href='#') 3
+                //- li: a.index(href='#') 4
+                //- li: a.index(href='#') 5
+                //- li: a(href='#') 下一页
+append script
+    script(src='/javascripts/product/main.js')
